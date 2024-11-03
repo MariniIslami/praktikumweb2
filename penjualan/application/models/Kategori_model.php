@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
-class Katagori_model extends CI_Model
+class Kategori_model extends CI_Model
 {
-    protected $_table = 'Kategori';
+    protected $_table = 'kategori';
     protected $primary = 'id';
 
     public function getAll()
@@ -31,7 +31,7 @@ class Katagori_model extends CI_Model
     {
         $this->db->where('id', $id)->delete($this->_table);
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata("success", "Data Katagori Berhasil Dihapus!");
+            $this->session->set_flashdata("success", "Data Kategori Berhasil Dihapus!");
         }
     }
 }

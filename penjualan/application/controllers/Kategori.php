@@ -14,7 +14,7 @@ class Kategori extends CI_Controller
         $data = array(
             'title' => 'View Data Kategori',
             'userlog' => infoLogin(),
-            'katagori' => $this->Kategori_model->getAll(),
+            'kategori' => $this->Kategori_model->getAll(),
             'content' => 'Kategori/index'
         );
         $this->load->view('template/main', $data);
@@ -42,7 +42,7 @@ class Kategori extends CI_Controller
     {
         $data = array(
             'title' => 'Update Data Kategori',
-            'Kategori' => $this->Kategori_model->getById($id),
+            'kategori' => $this->Kategori_model->getById($id),
             'content' => 'Kategori/edit_form'
         );
         $this->load->view('template/main', $data);

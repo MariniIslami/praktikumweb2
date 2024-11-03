@@ -10,22 +10,24 @@
                 <a href="<?php echo site_url('kategori/add') ?>"><i class="fas fa-plus"></i>Add New</a>
             </div>
             <?php if ($this->session->flashdata('success')): ?>
-        </div>
-    <?php endif; ?>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $no = 1;
-                    foreach ($kategori as $kategori) {
-                        echo "<tr>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('success'); ?>
+                </div>
+            <?php endif; ?>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $no = 1;
+                            foreach ($kategori as $kategori) {
+                                echo "<tr>
                                     <td> $no </td>
                                     <td> $kategori->name </td>
                                     <td>
@@ -35,11 +37,11 @@
                                         </div>
                                     </td>
                                     </tr>";
-                        $no++;
-                    } ?>
-                </tbody>
-            </table>
+                                $no++;
+                            } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
 </main>
