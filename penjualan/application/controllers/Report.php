@@ -49,4 +49,19 @@ class Report extends CI_Controller
     {
         $this->load->view('kustomer/report_kustomer');
     }
+
+    public function barangcustom()
+    {
+        $this->load->view('barang/report_barang');
+    }
+
+    public function kategoricustom()
+    {
+        $this->load->view('kategori/report_kategori');
+    }
+
+    public function satuancustom()
+    {
+        $this->load->view('satuan/report_satuan');
+    }
 }
